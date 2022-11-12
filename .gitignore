@@ -1,0 +1,5 @@
+*.png
+*.zip
+*.yaml
+test_code.py
+results/
