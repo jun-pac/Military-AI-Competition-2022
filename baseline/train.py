@@ -7,9 +7,12 @@ import shutil, random, os, sys, torch
 from glob import glob
 from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
+from pathlib import Path
+sys.path.append(Path(__file__))
+sys.path.append(Path(__file__).parent)
 
 prj_dir = os.path.dirname(os.path.abspath(__file__))
-data_dir = "/home/oiocha/maicon"
+data_dir = "/users/PAS1289/oiocha/Military-AI-Competition-2022"
 sys.path.append(prj_dir)
 
 from modules.utils import load_yaml, get_logger
@@ -67,11 +70,11 @@ if __name__ == '__main__':
     train_img_paths, val_img_paths = train_test_split(train_img_paths, test_size=config['val_size'], random_state=config['seed'], shuffle=True)
 
     train_dataset = SegDataset(paths=train_img_paths,
-                            input_size=[config['input_width'], config['input_height']],
+                            input_size=(config['input_width'], config['input_height']),
                             scaler=get_image_scaler(config['scaler']),
                             logger=logger)
     val_dataset = SegDataset(paths=val_img_paths,
-                            input_size=[config['input_width'], config['input_height']],
+                            input_size=(config['input_width'], config['input_height']),
                             scaler=get_image_scaler(config['scaler']),
                             logger=logger)
     # Create data loader

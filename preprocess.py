@@ -4,8 +4,8 @@ import os.path
 from PIL import Image
 import numpy as np
 
-before_dir = '/home/oiocha/maicon/train/y'
-after_dir = '/home/oiocha/maicon/data/my_dataset/train'
+before_dir = '/users/PAS1289/oiocha/Garage_data/train/y'
+after_dir = '/users/PAS1289/oiocha/Garage_data/my_dataset/train'
 
 input_list = glob(os.path.join(before_dir, '*.png'))
 # print(len(input_list)) # train set : 12000, test set : 2338
