@@ -2,8 +2,8 @@ import os, shutil
 from glob import glob
 from sklearn.model_selection import train_test_split
 
-train_dirs = '/home/oiocha/maicon/data/my_dataset/train'
-val_dirs = '/home/oiocha/maicon/data/my_dataset/val'
+train_dirs = '/users/PAS1289/oiocha/Garage_data/my_dataset/train'
+val_dirs = '/users/PAS1289/oiocha/Garage_data/my_dataset/val'
 
 Img1_paths = glob(os.path.join(train_dirs, 'Image1', '*.png'))
 Img2_paths = glob(os.path.join(train_dirs, 'Image2', '*.png'))

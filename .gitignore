@@ -1,5 +1,11 @@
+# datas
 *.png
 *.zip
 *.yaml
-test_code.py
 results/
+
+# test codes
+test_code.py
+
+# pycharm dummy files
+.idea
